@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { StyledComponentBase } from 'styled-components'
+import styled from 'styled-components'
 import { BG_COLORS, MAIN_COLORS, BORDER_COLORS } from '../colors'
 
 export type ButtonType = 'primary' | 'secondary' | 'danger'
