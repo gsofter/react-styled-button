@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentBase } from 'styled-components'
-import { BG_COLORS, MAIN_COLORS } from '../colors'
+import { BG_COLORS, MAIN_COLORS, BORDER_COLORS } from '../colors'
 
 export type ButtonType = 'primary' | 'secondary' | 'danger'
 
@@ -30,6 +30,17 @@ const StyledButton = styled.button<IStyledButtonProps>`
       : props.buttonType === 'secondary'
       ? BG_COLORS.SECONDARY
       : BG_COLORS.DANGER};
+
+  border-color: ${(props) =>
+    props.buttonType === 'primary'
+      ? BORDER_COLORS.PRIMARY
+      : props.buttonType === 'secondary'
+      ? BORDER_COLORS.SECONDARY
+      : BORDER_COLORS.DANGER};
+  transition-duration: 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 export const SFButton: React.FC<ISFButtonProps> = ({
