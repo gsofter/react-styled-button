@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import { SFButton } from './components/Buttons'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1> Style Component Testing </h1>
+      <SFButton
+        type="primary"
+        text="Primary Button"
+        action={() => alert('Primary Button')}
+      />
+      <SFButton
+        type="secondary"
+        text="Secondary Button"
+        action={() => alert('Secondary Button')}
+      />
+      <SFButton
+        type="danger"
+        text="danger Button"
+        action={() => alert('Danger Button')}
+      />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
