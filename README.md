@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# React Styled Button
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Screenshot
+![image](https://user-images.githubusercontent.com/49583931/129594735-f4a9df6e-6c4f-4e63-9279-bf4d0a33eda3.png)
+
 
 ## Available Scripts
 
