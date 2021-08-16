@@ -22,6 +22,12 @@ function App() {
         text="danger Button"
         action={() => alert('Danger Button')}
       />
+      <SFButton
+        disabled
+        type="danger"
+        text="Disabled Danger Button"
+        action={() => alert('Danger Button')}
+      />
     </div>
   )
 }

@@ -13,26 +13,33 @@ export interface ISFButtonProps {
 
 interface IStyledButtonProps {
   buttonType: ButtonType
+  disabled?: boolean
 }
 
 const StyledButton = styled.button<IStyledButtonProps>`
   border: 1px solid;
   color: ${(props) =>
-    props.buttonType === 'primary'
+    props.disabled
+      ? MAIN_COLORS.DISABLED
+      : props.buttonType === 'primary'
       ? MAIN_COLORS.PRIMARY
       : props.buttonType === 'secondary'
       ? MAIN_COLORS.SECONDARY
       : MAIN_COLORS.DANGER};
 
   background-color: ${(props) =>
-    props.buttonType === 'primary'
+    props.disabled
+      ? BG_COLORS.DISABLED
+      : props.buttonType === 'primary'
       ? BG_COLORS.PRIMARY
       : props.buttonType === 'secondary'
       ? BG_COLORS.SECONDARY
       : BG_COLORS.DANGER};
 
   border-color: ${(props) =>
-    props.buttonType === 'primary'
+    props.disabled
+      ? BORDER_COLORS.DISABLED
+      : props.buttonType === 'primary'
       ? BORDER_COLORS.PRIMARY
       : props.buttonType === 'secondary'
       ? BORDER_COLORS.SECONDARY
@@ -55,6 +62,7 @@ export const SFButton: React.FC<ISFButtonProps> = ({
       onClick={() => {
         if (!disabled) action()
       }}
+      disabled={disabled}
     >
       {text}
     </StyledButton>
